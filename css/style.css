@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: rgb(15, 13, 13);
+}
+
+.color-boxes {
+  width: 500px;
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+
+.color-box {
+  flex-basis: 30%;
+  height: 150px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 1s ease-out, opacity 1s ease-out;
+}
+.color-guess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 1s ease-out;
+  height: 100px;
+  font-family: "Montserrat", sans-serif;
+}
+.color-menu {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  height: 30px;
+  background: #f2d974;
+  align-items: center;
+}
+.color-menu-btn,
+.win {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: "Oswald", sans-serif;
+}
+.win {
+  margin-left: 1.5rem;
+}
+.color-menu-btn {
+  height: 100%;
+  cursor: pointer;
+}
+.color-menu-btn:hover {
+  color: white;
+}
+.color-menu-btn:active {
+  color: black;
+}
+.color-menu-difficulty {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 800px) {
+  .color-menu-difficulty {
+    width: 200px;
+  }
+  .color-menu {
+    font-size: 0.7rem;
+  }
+  .color-boxes {
+    width: 400px;
+    height: 350px;
+  }
+  .color-box {
+    height: 140px;
+  }
+}
